@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+		<nav class="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Calculator</a></li>
+		</ul>
+		</nav>
+		<input id="number" type="text"/>
+		<button id="calculate">Calculate</button>
+		<div id="answer">Answer:</div>
+		<script>
+			document.getElementById("calculate").addEventListener("click", function(){
+				if(document.getElementById("number").value != null || document.getElementById("number").value != ""){
+				    document.getElementById("answer").innerHTML = "Answer:";
+					var lbs = document.getElementById("number").value *2.2;
+					document.getElementById("answer").innerHTML = document.getElementById("answer").innerHTML + " " + Math.round(lbs*100)/100;
+				}
+			});
+		</script>
+		<style>
+			body{
+				background: black;
+				color: white;
+				font-size: 2em;
+				font-family: sans-serif;
+				padding: 20px;
+				margin: 20px;
+			}
+			.navbar {
+				height: 50px;
+				width: 100%;
+				background: grey;
+				color:white;
+			}
+			li {
+				display:inline;
+			}
+			.navbar > li {
+				text-decoration: none;
+				font-size: 1.2em;
+			}
+			.navbar > ul{
+				list-style: none;
+				float: right;
+				list-style-position: inside;
+				padding-right: 20px;
+				margin-top: auto;
+			}
+			.navbar a {
+				text-decoration: none;
+				color: white;
+			}
+			.navbar a:hover {
+				font-size: 1.2em;
+				text-decoration: underline;
+			}
+		</style>
+</body>
+</html>
